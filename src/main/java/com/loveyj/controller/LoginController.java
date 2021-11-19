@@ -114,9 +114,7 @@ public class LoginController {
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
-        System.out.println(result);
-        System.out.println(phone);
-        System.out.println(random2String);
+
         return random2String;
     }
 

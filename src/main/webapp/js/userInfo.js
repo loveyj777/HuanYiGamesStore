@@ -79,7 +79,7 @@ function allOrder() {
             elem: '#allOrderTable',
             url: '/user/order/allOrder',
             page: {
-                layout: ['count', 'prev', 'page', 'next', 'limit', 'refresh', 'skip']
+                layout: ['count', 'prev', 'page', 'next', 'refresh', 'skip']
 
                 ,first: false
                 ,last: false
@@ -144,7 +144,7 @@ function noPay() {
             elem: '#noPayTable',
             url: '/user/order/noPayOrder',
             page: {
-                layout: ['count', 'prev', 'page', 'next', 'limit', 'refresh', 'skip']
+                layout: ['count', 'prev', 'page', 'next',  'refresh', 'skip']
 
                 ,first: false
                 ,last: false
@@ -246,7 +246,7 @@ function finishOrder() {
             elem: '#finishOrderTable',
             url: '/user/order/finishOrder',
             page: {
-                layout: ['count', 'prev', 'page', 'next', 'limit', 'refresh', 'skip']
+                layout: ['count', 'prev', 'page', 'next',  'refresh', 'skip']
 
                 ,first: false
                 ,last: false
@@ -357,7 +357,7 @@ function notUse() {
             elem: '#notuseTable',
             url: '/user/coupon/notUseCoupon',
             page: {
-                layout: ['count', 'prev', 'page', 'next', 'limit', 'refresh', 'skip']
+                layout: ['count', 'prev', 'page', 'next',  'refresh', 'skip']
 
                 ,first: false
                 ,last: false
@@ -408,7 +408,7 @@ function usedCoupon() {
             elem: '#usedTable',
             url: '/user/coupon/usedCoupon',
             page: {
-                layout: ['count', 'prev', 'page', 'next', 'limit', 'refresh', 'skip']
+                layout: ['count', 'prev', 'page', 'next',  'refresh', 'skip']
 
                 ,first: false
                 ,last: false
@@ -457,7 +457,7 @@ function overdueCoupon() {
             elem: '#overdueTable',
             url: '/user/coupon/overdueCoupon',
             page: {
-                layout: ['count', 'prev', 'page', 'next', 'limit', 'refresh', 'skip']
+                layout: ['count', 'prev', 'page', 'next',  'refresh', 'skip']
 
                 ,first: false
                 ,last: false
@@ -554,7 +554,7 @@ function getUserPoints(){
             elem: '#pointsTable',
             url: '/user/points/returnUserPointsDetails',
             page: {
-                layout: ['count', 'prev', 'page', 'next', 'limit', 'refresh', 'skip']
+                layout: ['count', 'prev', 'page', 'next',  'refresh', 'skip']
 
                 ,first: false
                 ,last: false
@@ -627,7 +627,6 @@ layui.use('upload', function(){
             obj.preview(function(index, file, result){
                 $('#person-img').attr('src', result);
             });
-
         }
         ,done: function(res){
             //上传完毕回调

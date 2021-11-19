@@ -54,6 +54,10 @@ public class GamesController {
     //（int)游戏单价
     private  int priceInt;
 
+    private int pageNum=1;
+
+    private int pageSize=13;
+
     /**
      * @param modelAndView:
      * @param request:
@@ -293,15 +297,27 @@ public class GamesController {
         priceInt=0;
 
         if (price!=null&&!price.equals("任意数值")){
-            priceInt=Integer.parseInt(price);
+
+
+                priceInt=Integer.parseInt(price);
+
+
         }
 
         if (type!=null&&!type.equals("")){
-            typeID=Integer.parseInt(type);
+
+
+                typeID=Integer.parseInt(type);
+
+
         }
 
+        if (pageNum!=null&&pageSize!=null){
+            this.pageNum=pageNum;
+            this.pageSize=pageSize;
+        }
 
-        PageHelper.startPage(pageNum,pageSize);
+        PageHelper.startPage(this.pageNum,this.pageSize);
     }
 }
 

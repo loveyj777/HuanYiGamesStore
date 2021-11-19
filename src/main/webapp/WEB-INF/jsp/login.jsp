@@ -22,6 +22,7 @@ To change this template use File | Settings | File Templates.
 	<script src="https://ciphertrick.com/demo/jquerysession/js/jquerysession.js"></script>
 	<script src="../../layui/layui/layui.js"></script>
 	<link href="../../layui/layui/css/layui.css" rel="stylesheet" />
+	<link rel="stylesheet" href="../../css/font.css">
 
 	<script>
 		$(function() {
@@ -412,6 +413,7 @@ To change this template use File | Settings | File Templates.
 		</form>
 	</div>
 </div>
+
 
 </body>
 

@@ -16,6 +16,8 @@
     <script src="../../js/jquery-3.5.1.js" type="text/javascript"></script>
     <script src="../../../layui/layui/layui.js"></script>
     <link href="../../../layui/layui/css/layui.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../../css/font.css">
+
 </head>
 <body>
 <div class="layuimini-container">
@@ -265,6 +267,8 @@
 
     });
 </script>
+
+
 
 </body>
 </html>

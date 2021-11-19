@@ -21,6 +21,9 @@
     <link href="../../../layui/layui/css/layui.css" rel="stylesheet" />
     <link   rel="stylesheet" href="../../../css/header.css"/>
     <link rel="stylesheet" href="../../../css/footer.css">
+    <link rel="stylesheet" href="../../css/font.css">
+    <link rel="stylesheet" href="../../css/footer.css">
+
 
     <style>
         body {
@@ -350,119 +353,118 @@ search()
             <div id="typeList" style="width: 100%;height:380px;">
                 <c:choose >
                     <c:when  test="${type eq 1}">
-                        <c:if test="${price != null}"><a href="/games/pricedown?price=${price * 25}&pageNum=1&pageSize=13" ><i class="layui-icon layui-icon-radio "></i><span>动作</span></a></c:if>
-                        <c:if test="${price eq null}"><a href="/games/pricedown?pageNum=1&pageSize=13" ><i class="layui-icon layui-icon-circle "></i><span>动作</span></a></c:if>
+                        <c:if test="${price != null}"><a href="/games/priceDown?price=${price * 25}&pageNum=1&pageSize=13" ><i class="layui-icon layui-icon-radio "></i><span>动作</span></a></c:if>
+                        <c:if test="${price eq null}"><a href="/games/priceDown?pageNum=1&pageSize=13" ><i class="layui-icon layui-icon-circle "></i><span>动作</span></a></c:if>
                     </c:when>
                     <c:otherwise>
-                        <a href="/games/pricedown?type=1&price=${price *25}&pageNum=1&pageSize=13" ><i class="layui-icon layui-icon-circle "></i><span>动作</span></a>
+                        <a href="/games/priceDown?type=1&price=${price *25}&pageNum=1&pageSize=13" ><i class="layui-icon layui-icon-circle "></i><span>动作</span></a>
                     </c:otherwise>
                 </c:choose>
 
                 <c:choose >
                     <c:when  test="${type eq 2}">
-                        <c:if test="${price != null}"><a href="/games/pricedown?price=${price * 25}&pageNum=1&pageSize=13" ><i class="layui-icon layui-icon-radio "></i><span>冒险</span></a></c:if>
-                        <c:if test="${price eq null}"><a href="/games/pricedown?pageNum=1&pageSize=13" ><i class="layui-icon layui-icon-circle "></i><span>冒险</span></a></c:if>
+                        <c:if test="${price != null}"><a href="/games/priceDown?price=${price * 25}&pageNum=1&pageSize=13" ><i class="layui-icon layui-icon-radio "></i><span>冒险</span></a></c:if>
+                        <c:if test="${price eq null}"><a href="/games/priceDown?pageNum=1&pageSize=13" ><i class="layui-icon layui-icon-circle "></i><span>冒险</span></a></c:if>
                     </c:when>
                     <c:otherwise>
-                        <a href="/games/pricedown?type=2&price=${price *25}&pageNum=1&pageSize=13" ><i class="layui-icon layui-icon-circle "></i><span>冒险</span></a>
+                        <a href="/games/priceDown?type=2&price=${price *25}&pageNum=1&pageSize=13" ><i class="layui-icon layui-icon-circle "></i><span>冒险</span></a>
                     </c:otherwise>
                 </c:choose>
 
                 <c:choose >
                     <c:when  test="${type eq 3}">
-                        <c:if test="${price != null}"><a href="/games/pricedown?price=${price * 25}&pageNum=1&pageSize=13" ><i class="layui-icon layui-icon-radio "></i><span>角色扮演</span></a></c:if>
-                        <c:if test="${price eq null}"><a href="/games/pricedown?pageNum=1&pageSize=13" ><i class="layui-icon layui-icon-circle "></i><span>角色扮演</span></a></c:if>
+                        <c:if test="${price != null}"><a href="/games/priceDown?price=${price * 25}&pageNum=1&pageSize=13" ><i class="layui-icon layui-icon-radio "></i><span>角色扮演</span></a></c:if>
+                        <c:if test="${price eq null}"><a href="/games/priceDown?pageNum=1&pageSize=13" ><i class="layui-icon layui-icon-circle "></i><span>角色扮演</span></a></c:if>
                     </c:when>
                     <c:otherwise>
-                        <a href="/games/pricedown?type=3&price=${price *25}&pageNum=1&pageSize=13" ><i class="layui-icon layui-icon-circle "></i><span>角色扮演</span></a>
+                        <a href="/games/priceDown?type=3&price=${price *25}&pageNum=1&pageSize=13" ><i class="layui-icon layui-icon-circle "></i><span>角色扮演</span></a>
                     </c:otherwise>
                 </c:choose>
 
                 <c:choose >
                     <c:when  test="${type eq 4}">
-                        <c:if test="${price != null}"><a href="/games/pricedown?price=${price * 25}&pageNum=1&pageSize=13" ><i class="layui-icon layui-icon-radio "></i><span>射击</span></a></c:if>
-                        <c:if test="${price eq null}"><a href="/games/pricedown?pageNum=1&pageSize=13" ><i class="layui-icon layui-icon-circle "></i><span>射击</span></a></c:if>
+                        <c:if test="${price != null}"><a href="/games/priceDown?price=${price * 25}&pageNum=1&pageSize=13" ><i class="layui-icon layui-icon-radio "></i><span>射击</span></a></c:if>
+                        <c:if test="${price eq null}"><a href="/games/priceDown?pageNum=1&pageSize=13" ><i class="layui-icon layui-icon-circle "></i><span>射击</span></a></c:if>
                     </c:when>
                     <c:otherwise>
-                        <a href="/games/pricedown?type=4&price=${price *25}&pageNum=1&pageSize=13" ><i class="layui-icon layui-icon-circle "></i><span>射击</span></a>
+                        <a href="/games/priceDown?type=4&price=${price *25}&pageNum=1&pageSize=13" ><i class="layui-icon layui-icon-circle "></i><span>射击</span></a>
                     </c:otherwise>
                 </c:choose>
 
                 <c:choose >
                     <c:when  test="${type eq 5}">
-                        <c:if test="${price != null}"><a href="/games/pricedown?price=${price * 25}&pageNum=1&pageSize=13" ><i class="layui-icon layui-icon-radio "></i><span>大型多人在线</span></a></c:if>
-                        <c:if test="${price eq null}"><a href="/games/pricedown?pageNum=1&pageSize=13" ><i class="layui-icon layui-icon-circle "></i><span>大型多人在线</span></a></c:if>
+                        <c:if test="${price != null}"><a href="/games/priceDown?price=${price * 25}&pageNum=1&pageSize=13" ><i class="layui-icon layui-icon-radio "></i><span>大型多人在线</span></a></c:if>
+                        <c:if test="${price eq null}"><a href="/games/priceDown?pageNum=1&pageSize=13" ><i class="layui-icon layui-icon-circle "></i><span>大型多人在线</span></a></c:if>
                     </c:when>
                     <c:otherwise>
-                        <a href="/games/pricedown?type=5&price=${price *25}&pageNum=1&pageSize=13" ><i class="layui-icon layui-icon-circle "></i><span>大型多人在线</span></a>
+                        <a href="/games/priceDown?type=5&price=${price *25}&pageNum=1&pageSize=13" ><i class="layui-icon layui-icon-circle "></i><span>大型多人在线</span></a>
                     </c:otherwise>
                 </c:choose>
 
 
                 <c:choose >
                     <c:when  test="${type eq 6}">
-                        <c:if test="${price != null}"><a href="/games/pricedown?price=${price * 25}&pageNum=1&pageSize=13" ><i class="layui-icon layui-icon-radio "></i><span>策略</span></a></c:if>
-                        <c:if test="${price eq null}"><a href="/games/pricedown?pageNum=1&pageSize=13" ><i class="layui-icon layui-icon-circle "></i><span>策略</span></a></c:if>
+                        <c:if test="${price != null}"><a href="/games/priceDown?price=${price * 25}&pageNum=1&pageSize=13" ><i class="layui-icon layui-icon-radio "></i><span>策略</span></a></c:if>
+                        <c:if test="${price eq null}"><a href="/games/priceDown?pageNum=1&pageSize=13" ><i class="layui-icon layui-icon-circle "></i><span>策略</span></a></c:if>
                     </c:when>
                     <c:otherwise>
-                        <a href="/games/pricedown?type=6&price=${price *25}&pageNum=1&pageSize=13" ><i class="layui-icon layui-icon-circle "></i><span>策略</span></a>
+                        <a href="/games/priceDown?type=6&price=${price *25}&pageNum=1&pageSize=13" ><i class="layui-icon layui-icon-circle "></i><span>策略</span></a>
                     </c:otherwise>
                 </c:choose>
 
 
                 <c:choose >
                     <c:when  test="${type eq 7}">
-                        <c:if test="${price != null}"><a href="/games/pricedown?price=${price * 25}&pageNum=1&pageSize=13" ><i class="layui-icon layui-icon-radio "></i><span>模拟</span></a></c:if>
-                        <c:if test="${price eq null}"><a href="/games/pricedown?pageNum=1&pageSize=13" ><i class="layui-icon layui-icon-circle "></i><span>模拟</span></a></c:if>
+                        <c:if test="${price != null}"><a href="/games/priceDown?price=${price * 25}&pageNum=1&pageSize=13" ><i class="layui-icon layui-icon-radio "></i><span>模拟</span></a></c:if>
+                        <c:if test="${price eq null}"><a href="/games/priceDown?pageNum=1&pageSize=13" ><i class="layui-icon layui-icon-circle "></i><span>模拟</span></a></c:if>
                     </c:when>
                     <c:otherwise>
-                        <a href="/games/pricedown?type=7&price=${price *25}&pageNum=1&pageSize=13" ><i class="layui-icon layui-icon-circle "></i><span>模拟</span></a>
+                        <a href="/games/priceDown?type=7&price=${price *25}&pageNum=1&pageSize=13" ><i class="layui-icon layui-icon-circle "></i><span>模拟</span></a>
                     </c:otherwise>
                 </c:choose>
 
                 <c:choose >
                     <c:when  test="${type eq 8}">
-                        <c:if test="${price != null}"><a href="/games/pricedown?price=${price * 25}&pageNum=1&pageSize=13" ><i class="layui-icon layui-icon-radio "></i><span>体育</span></a></c:if>
-                        <c:if test="${price eq null}"><a href="/games/pricedown?pageNum=1&pageSize=13" ><i class="layui-icon layui-icon-circle "></i><span>体育</span></a></c:if>
+                        <c:if test="${price != null}"><a href="/games/priceDown?price=${price * 25}&pageNum=1&pageSize=13" ><i class="layui-icon layui-icon-radio "></i><span>体育</span></a></c:if>
+                        <c:if test="${price eq null}"><a href="/games/priceDown?pageNum=1&pageSize=13" ><i class="layui-icon layui-icon-circle "></i><span>体育</span></a></c:if>
                     </c:when>
                     <c:otherwise>
-                        <a href="/games/pricedown?type=8&price=${price *25}&pageNum=1&pageSize=13" ><i class="layui-icon layui-icon-circle "></i><span>体育</span></a>
+                        <a href="/games/priceDown?type=8&price=${price *25}&pageNum=1&pageSize=13" ><i class="layui-icon layui-icon-circle "></i><span>体育</span></a>
                     </c:otherwise>
                 </c:choose>
 
 
                 <c:choose >
                     <c:when  test="${type eq 9}">
-                        <c:if test="${price != null}"><a href="/games/pricedown?price=${price * 25}&pageNum=1&pageSize=13" ><i class="layui-icon layui-icon-radio "></i><span>独立</span></a></c:if>
-                        <c:if test="${price eq null}"><a href="/games/pricedown?pageNum=1&pageSize=13" ><i class="layui-icon layui-icon-circle "></i><span>独立</span></a></c:if>
+                        <c:if test="${price != null}"><a href="/games/priceDown?price=${price * 25}&pageNum=1&pageSize=13" ><i class="layui-icon layui-icon-radio "></i><span>独立</span></a></c:if>
+                        <c:if test="${price eq null}"><a href="/games/priceDown?pageNum=1&pageSize=13" ><i class="layui-icon layui-icon-circle "></i><span>独立</span></a></c:if>
                     </c:when>
                     <c:otherwise>
-                        <a href="/games/pricedown?type=9&price=${price *25}&pageNum=1&pageSize=13" ><i class="layui-icon layui-icon-circle "></i><span>独立</span></a>
+                        <a href="/games/priceDown?type=9&price=${price *25}&pageNum=1&pageSize=13" ><i class="layui-icon layui-icon-circle "></i><span>独立</span></a>
                     </c:otherwise>
                 </c:choose>
 
 
                 <c:choose >
                     <c:when  test="${type eq 10}">
-                        <c:if test="${price != null}"><a href="/games/pricedown?price=${price * 25}&pageNum=1&pageSize=13" ><i class="layui-icon layui-icon-radio "></i><span>竞速</span></a></c:if>
-                        <c:if test="${price eq null}"><a href="/games/pricedown?pageNum=1&pageSize=13" ><i class="layui-icon layui-icon-circle "></i><span>竞速</span></a></c:if>
+                        <c:if test="${price != null}"><a href="/games/priceDown?price=${price * 25}&pageNum=1&pageSize=13" ><i class="layui-icon layui-icon-radio "></i><span>休闲</span></a></c:if>
+                        <c:if test="${price eq null}"><a href="/games/priceDown?pageNum=1&pageSize=13" ><i class="layui-icon layui-icon-circle "></i><span>休闲</span></a></c:if>
                     </c:when>
                     <c:otherwise>
-                        <a href="/games/pricedown?type=10&price=${price *25}&pageNum=1&pageSize=13" ><i class="layui-icon layui-icon-circle "></i><span>竞速</span></a>
+                        <a href="/games/priceDown?type=10&price=${price *25}&pageNum=1&pageSize=13" ><i class="layui-icon layui-icon-circle "></i><span>休闲</span></a>
                     </c:otherwise>
                 </c:choose>
 
 
                 <c:choose >
                     <c:when  test="${type eq 11}">
-                        <c:if test="${price != null}"><a href="/games/pricedown?price=${price * 25}" ><i class="layui-icon layui-icon-radio "></i><span>休闲</span></a></c:if>
-                        <c:if test="${price eq null}"><a href="/games/pricedown?pageNum=1&pageSize=13" ><i class="layui-icon layui-icon-circle "></i><span>休闲</span></a></c:if>
+                        <c:if test="${price != null}"><a href="/games/priceDown?price=${price * 25}&pageNum=1&pageSize=13" ><i class="layui-icon layui-icon-radio "></i><span>竞速</span></a></c:if>
+                        <c:if test="${price eq null}"><a href="/games/priceDown?pageNum=1&pageSize=13" ><i class="layui-icon layui-icon-circle "></i><span>竞速</span></a></c:if>
                     </c:when>
                     <c:otherwise>
-                        <a href="/games/pricedown?type=11&price=${price *25}" ><i class="layui-icon layui-icon-circle "></i><span>休闲</span></a>
+                        <a href="/games/priceDown?type=11&price=${price *25}&pageNum=1&pageSize=13" ><i class="layui-icon layui-icon-circle "></i><span>竞速</span></a>
                     </c:otherwise>
                 </c:choose>
-
 
             </div>
         </div>
@@ -471,6 +473,49 @@ search()
 
 </div>
 
+
+<div id="footer" style="width: 100%;height: 300px;background-color: rgb(71,71,71);position: relative">
+
+    <div id="download">
+        <p>下载客户端:</p>
+        <div id="pc">
+            <span>PC端</span>
+            <div class="yuan">
+            </div>
+        </div>
+    </div>
+
+    <div id="official">
+        <p>官方渠道:</p>
+        <div id="qvdao1">
+            <span>微博</span>
+            <div class="yuan1">
+            </div>
+        </div>
+        <div id="qvdao2">
+            <span>微信</span>
+            <div class="yuan2">
+            </div>
+        </div>
+    </div>
+
+    <div id="friend">
+        <p id="p">友情连接:</p>
+        <div id="ftxt">
+            <a id="p1" href="">凤凰游戏</a>
+            <a href="" id="p2">杉果游戏</a>
+            <a id="p3" href="">WeGame</a>
+            <a href="" id="p4">Steam</a>
+        </div>
+    </div>
+
+    <div id="bqtxt">
+        <p>关于我们| AboutWe|服务条款│软件许可及服务协议│隐私保护指引|儿童隐私保护指引侵权通知|广告服务│客服中心│网站导航</p>
+        <p>COPYRIGHT @ 2021- 2021 LoveYJ.ALL RIGHTS RESERVED.</p>
+        <p>LoveYJ版权所有</p>
+    </div>
+
+</div>
 </body>
 
 

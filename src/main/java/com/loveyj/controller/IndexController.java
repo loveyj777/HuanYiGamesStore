@@ -169,7 +169,7 @@ public class IndexController {
             jsonObject.put("points", userPoints.getPoints());
             jsonObject.put("orders", orders.size());
 
-            System.out.println(jsonObject.toJSONString());
+
             return jsonObject.toJSONString();
         } else {
             return "false";

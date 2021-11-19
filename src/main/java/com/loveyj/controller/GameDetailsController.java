@@ -56,7 +56,7 @@ public class GameDetailsController {
 
         modelAndView.addObject("game",gamesList);
         modelAndView.addObject("imgs",imgs);
-        System.out.println(imgs);
+
         modelAndView.setViewName("gameDetails");
         return  modelAndView;
     }

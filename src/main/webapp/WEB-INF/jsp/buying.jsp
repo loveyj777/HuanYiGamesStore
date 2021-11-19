@@ -22,7 +22,8 @@
     <script src="https://unpkg.com/mathjs@7.1.0/dist/math.js"  type="text/javascript"></script>
     <link href="../../layui/layui/css/layui.css" rel="stylesheet" />
     <link   rel="stylesheet" href="../../css/header.css"/>
-    <link rel="stylesheet" href="../../css/footer.css">
+
+    <link rel="stylesheet" href="../../css/font.css">
 
     <style>
 

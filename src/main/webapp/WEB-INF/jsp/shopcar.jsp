@@ -23,6 +23,9 @@
     <link href="../../layui/layui/css/layui.css" rel="stylesheet" />
     <link   rel="stylesheet" href="../../css/header.css"/>
     <link rel="stylesheet" href="../../css/footer.css">
+    <link rel="stylesheet" href="../../css/font.css">
+
+
 
     <style>
 
@@ -31,6 +34,7 @@
             max-width: 1920px;
             min-width: 1200px;
             margin: 0 auto;
+
         }
         div{
             white-space: nowrap;
@@ -194,10 +198,7 @@
 
                 }else {
                     $('.cb').prop('checked',false);
-                    // for (let i = 0; i < $('.list-price').length ; i++) {
-                    //     price1 =  accSub(price1,parseFloat(($('.list-price:eq('+i+')').text().substr(1))))
-                    //     $('#allprice').text(price1)
-                    // }
+
                     price1='0.00'
                     $('#allprice').text(price1)
                 }
@@ -209,7 +210,12 @@
             let index ;
             $('.delete').click(function () {
                 index=$('.delete').index(this);
-
+                price1=  accSub(price1,parseFloat(($('.list-price:eq('+index+')').text().substr(1))))
+                checked.forEach(function(item, index2, arr) {
+                    if(item == $('.gid:eq('+index+')').val()) {
+                        arr.splice(index2, 1);
+                    }
+                })
                 $.ajax({
                     url:'/shopCar/deleteGameInShopCar'
                     ,data:{'gid':$('.gid:eq('+index+')').val()}
@@ -218,6 +224,8 @@
                         if(data=="ok"){
                             layer.msg("删除成功", {time: 2000, icon: 1,offset: '300px'});
                             $('.Game-child:eq('+index+')').remove()
+                            $('#allprice').text(price1)
+
                         }
                     }
                 })
@@ -308,7 +316,7 @@
 <c:choose>
     <c:when test="${shopCarList.size() eq 0}">
 
-        <div style="height: 300px;text-align: center;line-height: 300px">这里空空如也,请前往<a style="color: orangered" href="/games">游戏商城</a>购买</div>
+        <div style="height: 600px;text-align: center;line-height:500px">这里空空如也,请前往<a style="color: orangered" href="/games">游戏商城</a>购买</div>
 
 
     </c:when>
@@ -366,5 +374,8 @@
     </div>
 
 </div>
+
+
+
 </body>
 </html>

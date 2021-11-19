@@ -77,7 +77,7 @@ public class UserSettingController {
     public  String getUserInfoById(){
         User user=  userService.getUserById(uid);
 
-        System.out.println(JSON.toJSONString(userService.getUserById(uid)));
+
         return JSON.toJSONString(userService.getUserById(uid));
     }
 
@@ -169,7 +169,7 @@ public class UserSettingController {
     public  String updatePhone(@RequestParam("phone") String uPhone){
 
         User user = new User();
-        System.out.println(uPhone);
+
         user.setPhone(uPhone);
         user.setId(uid);
         if (userService.updateUserPhoneById(user)!=0){
@@ -193,7 +193,7 @@ public class UserSettingController {
     public String checkUserNameAndPhone(@RequestParam("userName") String userName,@RequestParam("phone") String phone){
 
         User user = userService.findUserByUserNameOrPhone(userName,phone);
-        System.out.println(phone);System.out.println(userName);
+
         if (user==null){
             return "ok";
         }

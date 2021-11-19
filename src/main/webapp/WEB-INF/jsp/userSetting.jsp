@@ -23,7 +23,8 @@ To change this template use File | Settings | File Templates.
 		<link href="../../layui/layui/css/layui.css" rel="stylesheet" />
 		<link   rel="stylesheet" href="../../css/header.css"/>
 		<link rel="stylesheet" href="../../css/userInfo.css">
-
+		<link rel="stylesheet" href="../../css/font.css">
+		<link rel="stylesheet" href="../../css/footer.css">
 
 
 		<script>
@@ -133,7 +134,7 @@ To change this template use File | Settings | File Templates.
 		</div>
 
 
-		<div class=" layui-fluid " id="section" style="margin-top: 30px;">
+		<div class=" layui-fluid " id="section" style="height:800px;margin-top: 30px;">
 
 			<div id="person-meau-left">
 				<dl style="height: 600px;">
@@ -208,6 +209,50 @@ To change this template use File | Settings | File Templates.
 
 				</div>
 			</div>
+		</div>
+
+
+		<div id="footer" style="width: 100%;height: 300px;background-color: rgb(71,71,71);position: relative">
+
+			<div id="download">
+				<p>下载客户端:</p>
+				<div id="pc">
+					<span>PC端</span>
+					<div class="yuan">
+					</div>
+				</div>
+			</div>
+
+			<div id="official">
+				<p>官方渠道:</p>
+				<div id="qvdao1">
+					<span>微博</span>
+					<div class="yuan1">
+					</div>
+				</div>
+				<div id="qvdao2">
+					<span>微信</span>
+					<div class="yuan2">
+					</div>
+				</div>
+			</div>
+
+			<div id="friend">
+				<p id="p">友情连接:</p>
+				<div id="ftxt">
+					<a id="p1" href="">凤凰游戏</a>
+					<a href="" id="p2">杉果游戏</a>
+					<a id="p3" href="">WeGame</a>
+					<a href="" id="p4">Steam</a>
+				</div>
+			</div>
+
+			<div id="bqtxt">
+				<p>关于我们| AboutWe|服务条款│软件许可及服务协议│隐私保护指引|儿童隐私保护指引侵权通知|广告服务│客服中心│网站导航</p>
+				<p>COPYRIGHT @ 2021- 2021 LoveYJ.ALL RIGHTS RESERVED.</p>
+				<p>LoveYJ版权所有</p>
+			</div>
+
 		</div>
 	</body>
 

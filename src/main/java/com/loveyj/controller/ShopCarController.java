@@ -119,7 +119,7 @@ private  int uid;
     @ResponseBody
     public String   deleteGameInShopCar (Integer gid){
 
-        System.out.println(gid);
+
 
         if(shopCarService.deleteGameInShopCarByUidAndGid(uid,gid)>0){
             return "ok";

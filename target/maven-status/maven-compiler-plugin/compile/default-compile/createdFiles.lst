@@ -2,7 +2,6 @@ com\loveyj\controller\UserPointsController.class
 com\loveyj\pojo\GamesDiscount.class
 com\loveyj\pojo\ShopCar.class
 com\loveyj\service\UserGamesService.class
-com\loveyj\controller\AdminLoginController.class
 com\loveyj\mapper\UserCouponMapper.class
 com\loveyj\controller\UserOrderController.class
 com\loveyj\service\RollImgService.class

@@ -24,6 +24,7 @@
   <link href="../../layui/layui/css/layui.css" rel="stylesheet" />
   <link   rel="stylesheet" href="../../css/header.css"/>
   <link rel="stylesheet" href="../../css/footer.css">
+  <link rel="stylesheet" href="../../css/font.css">
 
 
   <style>
@@ -949,7 +950,7 @@
 
       <div id="bqtxt">
         <p>关于我们| AboutWe|服务条款│软件许可及服务协议│隐私保护指引|儿童隐私保护指引侵权通知|广告服务│客服中心│网站导航</p>
-        <p>COPYRIGHT @ 2021- 2021 LoveYJ❤GHY.ALL RIGHTS RESERVED.</p>
+        <p>COPYRIGHT @ 2021- 2021 LoveYJ.ALL RIGHTS RESERVED.</p>
         <p>LoveYJ版权所有</p>
       </div>
 
