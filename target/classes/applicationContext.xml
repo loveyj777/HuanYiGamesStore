@@ -16,47 +16,66 @@
 
     <aop:aspectj-autoproxy/>
 
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <property name="defaultEncoding" value="UTF-8"></property>
+        <property name="maxUploadSize" value="10240000"></property>
+        <property name="maxInMemorySize" value="10240000" />
 
-<!--&lt;!&ndash;    sqlSessionFactory&ndash;&gt;-->
-<!--    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">-->
+    </bean>
 
-<!--        <property name="dataSource" ref="dataSource"/>-->
-<!--        <property name="configLocation" value="classpath:sqlMapperConfig.xml"/>-->
 
-<!--    </bean>-->
+<!--    sqlSessionFactory-->
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="plugins">
+            <array>
+                <bean class="com.github.pagehelper.PageInterceptor">
+                    <property name="properties">
+                        <!--使用下面的方式配置参数，一行配置一个 -->
+                        <value>
+                            helperDialect=mysql
+                        </value>
 
-<!--&lt;!&ndash;    mapper扫描器&ndash;&gt;-->
-<!--    <bean id="mapperScannerConfigurer" class="org.mybatis.spring.mapper.MapperScannerConfigurer">-->
-<!--     <property name="basePackage" value="com.loveyj.mapper"/>-->
-<!--        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>-->
-<!--    </bean>-->
+                    </property>
+                </bean>
+            </array>
+        </property>
+        <property name="dataSource" ref="dataSource"/>
+        <property name="configLocation" value="classpath:sqlMapperConfig.xml"/>
+
+    </bean>
+
+<!--    mapper扫描器-->
+    <bean id="mapperScannerConfigurer" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+     <property name="basePackage" value="com.loveyj.mapper"/>
+        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
+    </bean>
 
 <!--    事务管理-->
 
-<!--    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">-->
-<!--            <property name="dataSource" ref="dataSource"/>-->
-<!--    </bean>-->
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+            <property name="dataSource" ref="dataSource"/>
+    </bean>
 
-<!--&lt;!&ndash;    通知&ndash;&gt;-->
-<!--    <tx:advice  id="txAdvice"  transaction-manager="transactionManager">-->
-<!--        <tx:attributes>-->
-<!--            <tx:method name="save*" propagation="REQUIRED"/>-->
-<!--            <tx:method name="delete*" propagation="REQUIRED"/>-->
-<!--            <tx:method name="insert*" propagation="REQUIRED"/>-->
-<!--            <tx:method name="update*" propagation="REQUIRED"/>-->
-<!--            <tx:method name="select*" propagation="SUPPORTS" read-only="true"/>-->
-<!--            <tx:method name="find*" propagation="SUPPORTS" read-only="true"/>-->
-<!--            <tx:method name="get*" propagation="SUPPORTS" read-only="true"/>-->
-<!--        </tx:attributes>-->
-<!--    </tx:advice>-->
+<!--    通知-->
+    <tx:advice  id="txAdvice"  transaction-manager="transactionManager">
+        <tx:attributes>
+            <tx:method name="save*" propagation="REQUIRED"/>
+            <tx:method name="delete*" propagation="REQUIRED"/>
+            <tx:method name="insert*" propagation="REQUIRED"/>
+            <tx:method name="update*" propagation="REQUIRED"/>
+            <tx:method name="select*" propagation="SUPPORTS" read-only="true"/>
+            <tx:method name="find*" propagation="SUPPORTS" read-only="true"/>
+            <tx:method name="get*" propagation="SUPPORTS" read-only="true"/>
+        </tx:attributes>
+    </tx:advice>
 
-<!--    <aop:config>-->
-<!--        <aop:advisor advice-ref="txAdvice" pointcut="execution(* com.loveyj.service.impl.*.*(..))"/>-->
-<!--    </aop:config>-->
+    <aop:config>
+        <aop:advisor advice-ref="txAdvice" pointcut="execution(* com.loveyj.service.impl.*.*(..))"/>
+    </aop:config>
 
 
     <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
-        <property name="driver" value="${driverClass}"/>
+        <property name="driverClassName" value="${driverClass}"/>
         <property name="url" value="${jdbcUrl}"/>
         <property name="username" value="${user}"/>
         <property name="password" value="${password}"/>
@@ -70,9 +89,9 @@
         <property name="testWhileIdle" value="true" />
         <property name="testOnBorrow" value="false" />
         <property name="testOnReturn" value="false" />
-        <property name="poolPreparedStatements" value="true" />
+        <property name="poolPreparedStatements" value="false" />
         <property name="maxPoolPreparedStatementPerConnectionSize"
-                  value="20" />
+                  value="-1" />
     </bean>
 
     <bean id="druid-stat-interceptor"

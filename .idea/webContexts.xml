@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebContextManager">
+    <option name="state">
+      <map>
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/buying.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/coupons.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/games.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/games/hotSale.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/games" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/games/new.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/games" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/houtai/addGame.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/houtai" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/houtai/adminLogin.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/houtai" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/index.jsp" value="file://$PROJECT_DIR$/src/main/webapp" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/user.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/userInfo.jsp" value="file://$PROJECT_DIR$/src/main/webapp" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/login.jsp" value="file://$PROJECT_DIR$/src/main/webapp" />
+      </map>
+    </option>
+  </component>
+</project>

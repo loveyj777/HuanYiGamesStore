@@ -1,0 +1,292 @@
+#download
+{
+
+    position: absolute;
+    top: 50px;
+    width: 200px;
+    height: 100px;
+    overflow: hidden;
+    left: 23%;
+}
+#download p
+{
+
+    margin-top: 5px;
+    color: gray;
+    font-family: '微软雅黑';
+    font-size: 18px;
+    width: 100px;
+    height: 25px;
+    overflow: hidden;
+}
+#pc
+{
+
+    cursor: pointer;
+    position: absolute;
+    width: 95px;
+    height: 98px;
+    bottom: 0px;
+    right: 0px;
+
+}
+#pc:hover span
+{
+    color: lightgray;
+}
+#pc span
+{
+
+    color: gray;
+    font-family: '微软雅黑';
+    position: absolute;
+    bottom: 0px;
+    left: 32px;
+    font-size: 13px;
+    width: 30px;
+    height:18px ;
+}
+.yuan
+{
+    border: 1px solid gray;
+    position: absolute;
+    width: 65px;
+    height:65px;
+    background-image: url(../img/Windows.svg);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 30px;
+    left: 14px;
+    border-radius: 50%;
+}
+#pc:hover .yuan
+{
+    background-image: url(../img/Windowssb.svg);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 30px;
+}
+
+#official
+{
+
+    position: absolute;
+    top: 50px;
+    width: 300px;
+    height: 100px;
+    overflow: hidden;
+    left:38%;
+}
+
+#official p
+{
+
+    margin-top: 5px;
+    color: gray;
+    font-family: '微软雅黑';
+    font-size: 18px;
+    width: 80px;
+    height: 25px;
+    overflow: hidden;
+}
+
+#qvdao1
+{
+    cursor: pointer;
+    position: absolute;
+    width: 95px;
+    height: 98px;
+    bottom: 0px;
+    left: 100px;
+}
+
+#qvdao1:hover span
+{
+    color: lightgray;
+}
+#qvdao1 span
+{
+
+    color: gray;
+    font-family: '微软雅黑';
+    position: absolute;
+    bottom: 0px;
+    left: 32px;
+    font-size: 13px;
+    width: 30px;
+    height:18px ;
+}
+
+#qvdao2
+{
+    cursor: pointer;
+    position: absolute;
+    width: 95px;
+    height: 98px;
+    bottom: 0px;
+    right: 0px;
+}
+
+#qvdao2:hover span
+{
+    color: lightgray;
+}
+#qvdao2 span
+{
+
+    color: gray;
+    font-family: '微软雅黑';
+    position: absolute;
+    bottom: 0px;
+    left: 32px;
+    font-size: 13px;
+    width: 30px;
+    height:18px ;
+}
+.yuan1
+{
+    border: 1px solid gray;
+    position: absolute;
+    width: 65px;
+    height:65px;
+    background-image: url(../img/weib.svg);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 35px;
+    left: 14px;
+    border-radius: 50%;
+}
+#qvdao1:hover .yuan1
+{
+    background-image: url(../img/weib1.svg);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 35px;
+}
+
+.yuan2
+{
+    border: 1px solid gray;
+    position: absolute;
+    width: 65px;
+    height:65px;
+    background-image: url(../img/wechat.svg);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 30px;
+    left: 14px;
+    border-radius: 50%;
+}
+#qvdao2:hover .yuan2
+{
+    background-image: url(../img/wechat1.svg);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 30px;
+}
+
+#friend
+{
+
+    position: absolute;
+    left: 60%;
+    top: 50px;
+    width: 300px;
+    height: 70px;
+    overflow: hidden;
+}
+
+#friend #p
+{
+
+    margin-top: 5px;
+    color: gray;
+    font-family: '微软雅黑';
+    font-size: 18px;
+    width: 80px;
+    height: 25px;
+    overflow: hidden;
+}
+
+#p1
+{
+    width: 60px;
+    color: gray;
+    font-family: '微软雅黑';
+    font-size: 14px;
+    position: absolute;
+    top: 7px;
+    overflow: hidden;
+    height: 20px;
+    left: 90px;
+    text-decoration: none;
+    overflow: hidden;
+}
+#p2,#p3,#p4
+{
+    text-decoration: none;
+    color: gray;
+    font-size: 14px;
+    font-family: '微软雅黑';
+}
+
+#p2
+{
+    position: absolute;
+    top: 7px;
+    left: 180px;
+    width: 70px;
+    height: 20px;
+    overflow: hidden;
+}
+#p3
+{
+    overflow: hidden;
+    position: absolute;
+    top: 40px;
+    left: 90px;
+    width: 60px;
+    height: 20px;
+}
+#p4
+{
+    overflow: hidden;
+    position: absolute;
+    top: 40px;
+    left: 180px;
+    width: 70px;
+    height: 20px;
+}
+#p1:hover
+{
+    color: lightgray;
+}
+#p2:hover
+{
+    color: lightgray;
+}
+#p3:hover
+{
+    color: lightgray;
+}
+#p4:hover
+{
+    color: lightgray;
+}
+
+#bqtxt
+{
+    position: absolute;
+    bottom: 50px;
+    left:17%;
+    text-align: center;
+    width: 1000px;
+    height: 72px;
+    overflow: hidden;
+    color: grey;
+    font-size: 14px;
+}
+#bqtxt p
+{
+    margin-top: 5px;
+}

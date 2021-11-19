@@ -11,7 +11,5 @@
 
     </typeAliases>
 
-<!--    <typeHandlers>-->
-<!--       <typeHandler handler="com.loveyj.base.typehandler"/>-->
-<!--    </typeHandlers>-->
+
 </configuration>

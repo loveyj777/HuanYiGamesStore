@@ -14,13 +14,25 @@
 
    <context:component-scan base-package="com.loveyj.controller"/>
 
+    <mvc:view-controller path="/" view-name="redirect:index"/>
+
+
+<!--视图解析器-->
+    <bean  id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/WEB-INF/jsp/"/>
+        <property name="suffix" value=".jsp"/>
+    </bean>
 
 
 
-<!--    视图解析器-->
-<!--    <bean  id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">-->
-<!--        <property name="prefix" value="/WEB-INF/jsp/"/>-->
-<!--        <property name="suffix" value=".jsp"/>-->
-<!--    </bean>-->
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <mvc:mapping path="/userInfo"/>
+            <mvc:mapping path="/user/{id}"/>
+            <mvc:mapping path="/shopCar"/>
+            <mvc:mapping path="/shopCar/addToShopCar"/>
+            <bean class="com.loveyj.utility.Interceptor"/>
+        </mvc:interceptor>
+    </mvc:interceptors>
 
 </beans>
