@@ -9,23 +9,65 @@ public interface CouponMapper {
 
 
     @Select("SELECT *,user_coupon.`id` ucid FROM user_coupon ,coupon WHERE cid=coupon.`id` AND uid=#{uid}  and status='0' and `isOverdue`='0' ")
-    List<Coupon> getNotUseCouponByUid(int uid);
+    @Results({
+            @Result(id = true,column = "id",property = "id"),
+            @Result(column = "id",property = "id"),
+            @Result(column = "couponName",property = "couponName"),
+            @Result(column = "beginTime",property = "beginTime"),
+            @Result(column = "endTime",property = "endTime"),
+            @Result(column = "condition",property = "condition"),
+            @Result(column = "uid",property = "userCoupon.uid"),
+            @Result(column = "cid",property = "userCoupon.cid"),
+            @Result(column = "status",property = "userCoupon.status"),
+            @Result(column = "ucid",property = "userCoupon.id"),
+            @Result(column = "getTime",property = "userCoupon.getTime"),
+            @Result(column = "useTime",property = "userCoupon.useTime")
+    })
+    List<Coupon> getNotUseCouponByUid(@Param("uid") int uid);
 
 
 
     @Select("SELECT *,user_coupon.`id` ucid FROM user_coupon ,coupon WHERE cid=coupon.`id` AND uid=#{uid} and status='1' ")
-    List<Coupon> getUsedCouponByUid(int uid);
+    @Results({
+            @Result(id = true,column = "id",property = "id"),
+            @Result(column = "id",property = "id"),
+            @Result(column = "couponName",property = "couponName"),
+            @Result(column = "beginTime",property = "beginTime"),
+            @Result(column = "endTime",property = "endTime"),
+            @Result(column = "condition",property = "condition"),
+            @Result(column = "uid",property = "userCoupon.uid"),
+            @Result(column = "cid",property = "userCoupon.cid"),
+            @Result(column = "status",property = "userCoupon.status"),
+            @Result(column = "ucid",property = "userCoupon.id"),
+            @Result(column = "getTime",property = "userCoupon.getTime"),
+            @Result(column = "useTime",property = "userCoupon.useTime")
+    })
+    List<Coupon> getUsedCouponByUid(@Param("uid")int uid);
 
 
 
 
     @Select("SELECT *,user_coupon.`id` ucid FROM user_coupon ,coupon WHERE cid=coupon.`id` AND uid=#{uid} AND user_coupon.`isOverdue`='1' and user_coupon.`status`='0' ")
-    List<Coupon> getUserOverdueCoupon(int uid);
+    @Results({
+            @Result(id = true,column = "id",property = "id"),
+            @Result(column = "id",property = "id"),
+            @Result(column = "couponName",property = "couponName"),
+            @Result(column = "beginTime",property = "beginTime"),
+            @Result(column = "endTime",property = "endTime"),
+            @Result(column = "condition",property = "condition"),
+            @Result(column = "uid",property = "userCoupon.uid"),
+            @Result(column = "cid",property = "userCoupon.cid"),
+            @Result(column = "status",property = "userCoupon.status"),
+            @Result(column = "ucid",property = "userCoupon.id"),
+            @Result(column = "getTime",property = "userCoupon.getTime"),
+            @Result(column = "useTime",property = "userCoupon.useTime")
+    })
+    List<Coupon> getUserOverdueCoupon(@Param("uid") int uid);
 
 
 
-    @Update("UPDATE user_coupon,coupon SET user_coupon.`isOverdue`='1' WHERE NOW()>coupon.`endTime` AND user_coupon.`uid`=#{uid} and `status` !='1' ")
-    int updateUserCouponIfIsOverdue(int uid);
+    @Update("UPDATE user_coupon,coupon SET user_coupon.`isOverdue`='1' WHERE NOW()>coupon.`endTime` AND user_coupon.`uid`=#{uid} and `status` !='1'  AND coupon.`id`=#{cid} ")
+    int updateUserCouponIfIsOverdue(@Param("uid")int uid,@Param("cid")int cid);
 
 
 

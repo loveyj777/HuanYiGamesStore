@@ -30,8 +30,8 @@ public class CouponServiceImpl implements CouponService {
     }
 
     @Override
-    public int updateUserCouponIfIsOverdue(int uid) {
-        return couponMapper.updateUserCouponIfIsOverdue(uid);
+    public int updateUserCouponIfIsOverdue(int uid,int cid) {
+        return couponMapper.updateUserCouponIfIsOverdue(uid,cid);
     }
 
     @Override

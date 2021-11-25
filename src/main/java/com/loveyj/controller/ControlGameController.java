@@ -133,8 +133,7 @@ public class ControlGameController {
     @ResponseBody
     public String changeGameDiscount(Integer id, double discount) {
 
-        System.out.println(id);
-        System.out.println(discount);
+
         if (gameDiscountService.updateGameDiscount(discount,id) > 0) {
 
             gamesService.updateDiscountPrice(id,discount);

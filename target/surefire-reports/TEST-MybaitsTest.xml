@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="MybaitsTest" time="0.568" tests="1" errors="1" skipped="0" failures="0">
+  <properties>
+    <property name="sun.desktop" value="windows"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="GBK"/>
+    <property name="java.class.path" value="C:\HuanYiGamesStore\target\test-classes;C:\HuanYiGamesStore\target\classes;D:\mvnrepository\mysql\mysql-connector-java\5.1.34\mysql-connector-java-5.1.34.jar;D:\mvnrepository\org\springframework\spring-context\5.3.8\spring-context-5.3.8.jar;D:\mvnrepository\org\springframework\spring-aop\5.3.8\spring-aop-5.3.8.jar;D:\mvnrepository\org\springframework\spring-beans\5.3.8\spring-beans-5.3.8.jar;D:\mvnrepository\org\springframework\spring-core\5.3.8\spring-core-5.3.8.jar;D:\mvnrepository\org\springframework\spring-jcl\5.3.8\spring-jcl-5.3.8.jar;D:\mvnrepository\org\springframework\spring-expression\5.3.8\spring-expression-5.3.8.jar;D:\mvnrepository\junit\junit\4.12\junit-4.12.jar;D:\mvnrepository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;D:\mvnrepository\org\springframework\spring-test\5.2.1.RELEASE\spring-test-5.2.1.RELEASE.jar;D:\mvnrepository\javax\servlet\javax.servlet-api\3.1.0\javax.servlet-api-3.1.0.jar;D:\mvnrepository\javax\servlet\jsp\javax.servlet.jsp-api\2.2.1\javax.servlet.jsp-api-2.2.1.jar;D:\mvnrepository\org\springframework\spring-web\5.0.5.RELEASE\spring-web-5.0.5.RELEASE.jar;D:\mvnrepository\org\springframework\spring-webmvc\5.0.5.RELEASE\spring-webmvc-5.0.5.RELEASE.jar;D:\mvnrepository\commons-fileupload\commons-fileupload\1.3.1\commons-fileupload-1.3.1.jar;D:\mvnrepository\commons-io\commons-io\2.2\commons-io-2.2.jar;D:\mvnrepository\org\springframework\spring-jdbc\5.3.8\spring-jdbc-5.3.8.jar;D:\mvnrepository\org\springframework\spring-tx\5.3.8\spring-tx-5.3.8.jar;D:\mvnrepository\com\labun\spring-tx\5.2.3.RELEASE.patched\spring-tx-5.2.3.RELEASE.patched.jar;D:\mvnrepository\org\aspectj\aspectjweaver\1.8.9\aspectjweaver-1.8.9.jar;D:\mvnrepository\org\mybatis\mybatis-spring\1.3.0\mybatis-spring-1.3.0.jar;D:\mvnrepository\org\mybatis\mybatis\3.5.0\mybatis-3.5.0.jar;D:\mvnrepository\com\alibaba\druid\1.1.10\druid-1.1.10.jar;D:\mvnrepository\javax\servlet\jstl\1.2\jstl-1.2.jar;D:\mvnrepository\com\zhenzikj\zhenzisms\2.0.2\zhenzisms-2.0.2.jar;D:\mvnrepository\com\alibaba\fastjson\1.2.75\fastjson-1.2.75.jar;D:\mvnrepository\com\github\pagehelper\pagehelper\5.2.0\pagehelper-5.2.0.jar;D:\mvnrepository\com\github\jsqlparser\jsqlparser\3.2\jsqlparser-3.2.jar;D:\mvnrepository\com\alipay\sdk\alipay-sdk-java\4.18.0.ALL\alipay-sdk-java-4.18.0.ALL.jar;D:\mvnrepository\commons-logging\commons-logging\1.1.1\commons-logging-1.1.1.jar;D:\mvnrepository\org\bouncycastle\bcprov-jdk15on\1.62\bcprov-jdk15on-1.62.jar;D:\mvnrepository\dom4j\dom4j\1.6.1\dom4j-1.6.1.jar;D:\mvnrepository\xml-apis\xml-apis\1.0.b2\xml-apis-1.0.b2.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="user.timezone" value="Asia/Shanghai"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="user.country" value="CN"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_181\jre\bin"/>
+    <property name="sun.java.command" value="C:\Users\asus\AppData\Local\Temp\surefire6340961235587185321\surefirebooter5940207306383675711.jar C:\Users\asus\AppData\Local\Temp\surefire6340961235587185321 2021-11-23T14-34-12_264-jvmRun1 surefire3319744721524748345tmp surefire_04430923195581776237tmp"/>
+    <property name="surefire.test.class.path" value="C:\HuanYiGamesStore\target\test-classes;C:\HuanYiGamesStore\target\classes;D:\mvnrepository\mysql\mysql-connector-java\5.1.34\mysql-connector-java-5.1.34.jar;D:\mvnrepository\org\springframework\spring-context\5.3.8\spring-context-5.3.8.jar;D:\mvnrepository\org\springframework\spring-aop\5.3.8\spring-aop-5.3.8.jar;D:\mvnrepository\org\springframework\spring-beans\5.3.8\spring-beans-5.3.8.jar;D:\mvnrepository\org\springframework\spring-core\5.3.8\spring-core-5.3.8.jar;D:\mvnrepository\org\springframework\spring-jcl\5.3.8\spring-jcl-5.3.8.jar;D:\mvnrepository\org\springframework\spring-expression\5.3.8\spring-expression-5.3.8.jar;D:\mvnrepository\junit\junit\4.12\junit-4.12.jar;D:\mvnrepository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;D:\mvnrepository\org\springframework\spring-test\5.2.1.RELEASE\spring-test-5.2.1.RELEASE.jar;D:\mvnrepository\javax\servlet\javax.servlet-api\3.1.0\javax.servlet-api-3.1.0.jar;D:\mvnrepository\javax\servlet\jsp\javax.servlet.jsp-api\2.2.1\javax.servlet.jsp-api-2.2.1.jar;D:\mvnrepository\org\springframework\spring-web\5.0.5.RELEASE\spring-web-5.0.5.RELEASE.jar;D:\mvnrepository\org\springframework\spring-webmvc\5.0.5.RELEASE\spring-webmvc-5.0.5.RELEASE.jar;D:\mvnrepository\commons-fileupload\commons-fileupload\1.3.1\commons-fileupload-1.3.1.jar;D:\mvnrepository\commons-io\commons-io\2.2\commons-io-2.2.jar;D:\mvnrepository\org\springframework\spring-jdbc\5.3.8\spring-jdbc-5.3.8.jar;D:\mvnrepository\org\springframework\spring-tx\5.3.8\spring-tx-5.3.8.jar;D:\mvnrepository\com\labun\spring-tx\5.2.3.RELEASE.patched\spring-tx-5.2.3.RELEASE.patched.jar;D:\mvnrepository\org\aspectj\aspectjweaver\1.8.9\aspectjweaver-1.8.9.jar;D:\mvnrepository\org\mybatis\mybatis-spring\1.3.0\mybatis-spring-1.3.0.jar;D:\mvnrepository\org\mybatis\mybatis\3.5.0\mybatis-3.5.0.jar;D:\mvnrepository\com\alibaba\druid\1.1.10\druid-1.1.10.jar;D:\mvnrepository\javax\servlet\jstl\1.2\jstl-1.2.jar;D:\mvnrepository\com\zhenzikj\zhenzisms\2.0.2\zhenzisms-2.0.2.jar;D:\mvnrepository\com\alibaba\fastjson\1.2.75\fastjson-1.2.75.jar;D:\mvnrepository\com\github\pagehelper\pagehelper\5.2.0\pagehelper-5.2.0.jar;D:\mvnrepository\com\github\jsqlparser\jsqlparser\3.2\jsqlparser-3.2.jar;D:\mvnrepository\com\alipay\sdk\alipay-sdk-java\4.18.0.ALL\alipay-sdk-java-4.18.0.ALL.jar;D:\mvnrepository\commons-logging\commons-logging\1.1.1\commons-logging-1.1.1.jar;D:\mvnrepository\org\bouncycastle\bcprov-jdk15on\1.62\bcprov-jdk15on-1.62.jar;D:\mvnrepository\dom4j\dom4j\1.6.1\dom4j-1.6.1.jar;D:\mvnrepository\xml-apis\xml-apis\1.0.b2\xml-apis-1.0.b2.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\asus"/>
+    <property name="user.language" value="zh"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_181\jre"/>
+    <property name="basedir" value="C:\HuanYiGamesStore"/>
+    <property name="file.separator" value="\"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="surefire.real.class.path" value="C:\Users\asus\AppData\Local\Temp\surefire6340961235587185321\surefirebooter5940207306383675711.jar"/>
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_181\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_181\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_181\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_181\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_181\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_181\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_181\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_181\jre\classes"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="1.8.0_181-b13"/>
+    <property name="user.name" value="asus"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_181\jre\lib\endorsed"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="GBK"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="D:\mvnrepository"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\asus\AppData\Local\Temp\"/>
+    <property name="idea.version" value="2021.1.3"/>
+    <property name="java.version" value="1.8.0_181"/>
+    <property name="user.dir" value="C:\HuanYiGamesStore"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_181\jre\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\Java\jdk1.8.0_181\bin;C:\Program Files\Microsoft\Web Platform Installer\;C:\Program Files (x86)\Microsoft ASP.NET\ASP.NET Web Pages\v1.0\;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE\;C:\Program Files (x86)\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies\;C:\Program Files (x86)\Microsoft SQL Server\100\DTS\Binn\;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;&quot;C:\Program Files\Tesseract-OCR;&quot;;C:\Users\asus\Desktop\apache-tomcat-8.5.54-windows-x64\apache-tomcat-8.5.54\bin;C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python37_64\Scripts;D:\apache-maven-3.8.1\bin;C:\Program Files\Java\jdk1.8.0_181\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\asus\AppData\Local\Microsoft\WindowsApps;C:\Users\asus\.dotnet\tools;C:\Program Files\JetBrains\PyCharm 2020.3.5\bin;;C:\Program Files\Tesseract-OCR;C:\Users\asus\Desktop\apache-tomcat-8.5.54-windows-x64\apache-tomcat-8.5.54\bin;C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python37_64\Scripts;C:\Users\asus\AppData\Local\GitHubDesktop\bin;."/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="25.181-b13"/>
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_181\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="maven.repo.local" value="D:\mvnrepository"/>
+    <property name="java.class.version" value="52.0"/>
+  </properties>
+  <testcase name="Test" classname="MybaitsTest" time="0.483">
+    <error message="Type interface com.loveyj.mapper.UserMapper is not known to the MapperRegistry." type="org.apache.ibatis.binding.BindingException">org.apache.ibatis.binding.BindingException: Type interface com.loveyj.mapper.UserMapper is not known to the MapperRegistry.
+	at MybaitsTest.Test(MybaitsTest.java:23)
+</error>
+  </testcase>
+</testsuite>

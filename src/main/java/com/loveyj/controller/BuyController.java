@@ -7,6 +7,7 @@ import com.loveyj.service.impl.*;
 import com.loveyj.utility.AlipayUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
@@ -130,6 +131,7 @@ public class BuyController {
     @ResponseBody
     public String continueBuy(HttpServletRequest request,Double price,String oid) {
 
+        reset();
         oid4continue =oid;
         this.price=price;
 
@@ -150,6 +152,7 @@ public class BuyController {
     @ResponseBody
         public String getOrderInfo(HttpServletRequest request,Double price){
 
+        reset();
          if(request.getParameterValues("checked[]")!=null){
             id =request.getParameterValues("checked[]");
          }
@@ -167,7 +170,7 @@ public class BuyController {
      * @description 添加订单
      * @date 2021/11/9 15:37
      */
-    @RequestMapping("/insertOrder")
+    @PostMapping("/insertOrder")
     @ResponseBody
     public String insertOrder(HttpServletRequest request,String finalPrice,Integer couponID){
        if(couponID!=null){
@@ -271,14 +274,53 @@ public class BuyController {
             userCouponService.updateCouponToUse(uid,couponId);
         }
         int finalPoints= (int) (Double.valueOf(finalPrice).intValue()*0.2);
-        System.out.println(finalPoints);
+
         userPointsService.updatePoints4Buy(uid,finalPoints);
         userPointsDetailsService.insertDetails4Buy(uid,finalPoints);
-        oid4continue=null;
+
+        reset();
 
 
+        return "redirect:http://www.hygame.store/index";
+    }
 
 
-        return "redirect:/index";
+    private void reset(){
+
+         id=null;
+
+
+        //游戏id
+         String[] id=null;
+
+        //结束金额
+          String finalPrice =null;
+
+        //游戏名称
+         String[] gameName =null;
+
+        //游戏主图
+          String[] productImg=null;
+
+        //用户id
+         int uid = 0;
+
+        //订单id
+         String oid = null;
+
+        //继续支付订单id
+         String oid4continue = null;
+
+        //订单Id
+         Integer[] oid4update =null;
+
+        //用户名称
+           String uName = null;
+
+        //订单金额
+         Double price = null;
+
+        //优惠卷Id
+          couponId = 0;
     }
 }

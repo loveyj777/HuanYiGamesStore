@@ -8,6 +8,7 @@ import com.loveyj.service.GamesImgService;
 import com.loveyj.service.GamesService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
@@ -63,14 +64,14 @@ public class AddGameController {
      */
     @RequestMapping("/insertGame")
     @ResponseBody
-    public  String insertGame(String gameName, String engGameName, String price, String publishTime, String type, String gameInfo) throws IOException {
+    public  String insertGame(String gameName, String engGameName, String price, String publishTime, Integer type, String gameInfo) throws IOException {
 
 
         Games games = new Games();
         games.setDescript(gameInfo);
         games.setEngGameName(engGameName);
         games.setGameName(gameName);
-        games.setType(Integer.parseInt(type));
+        games.setType(type);
         games.setPublishTime(publishTime);
         games.setPrice(Double.parseDouble(price));
         gamesService.insertGame(games);
@@ -82,7 +83,7 @@ public class AddGameController {
         gamesImg.setIsMaster(1);
         gamesImgService.InsertGamesImg(gamesImg);
         gameDiscountService.insertNewGamesDiscount(id);
-        mst.transferTo(new File("C:\\HuanYiGamesStore\\src\\main\\webapp\\img\\gamesImg\\"+mst.getOriginalFilename()));
+        mst.transferTo(new File("/usr/local/tomcat/apache-tomcat-8.5.73/webapps/HuanYiGamesStore/img/gamesImg/"+mst.getOriginalFilename()));
 
 
         return String.valueOf(id);
@@ -137,7 +138,7 @@ public class AddGameController {
         gamesImg.setId(id);
         gamesImg.setIsMaster(0);
         gamesImgService.InsertGamesImg(gamesImg);
-        detailImg.transferTo(new File("C:\\HuanYiGamesStore\\src\\main\\webapp\\img\\gamesImg\\"+detailImg.getOriginalFilename()));
+        detailImg.transferTo(new File("/usr/local/tomcat/apache-tomcat-8.5.73/webapps/HuanYiGamesStore/img/gamesImg/"+detailImg.getOriginalFilename()));
         jsonObject1.put("src",detailImg.getOriginalFilename());
         jsonObject.put("msg","");
         jsonObject.put("code",0);

@@ -3,15 +3,12 @@ package com.loveyj.controller;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.loveyj.pojo.Games;
-import com.loveyj.pojo.User;
 import com.loveyj.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
 import java.util.List;
 
 /**
@@ -45,8 +42,7 @@ public class GamesController {
     @Autowired
     CouponService couponService;
 
-    //用户id
-    private  int uid;
+
 
     //游戏类型Id
     private  int typeID;
@@ -54,27 +50,16 @@ public class GamesController {
     //（int)游戏单价
     private  int priceInt;
 
-    private int pageNum=1;
-
-    private int pageSize=13;
-
     /**
      * @param modelAndView:
-     * @param request:
      * @return ModelAndView
      * @author lov3YJ
      * @description 跳转商城初始页
      * @date 2021/11/10 9:30
      */
     @RequestMapping()
-    public ModelAndView games(ModelAndView modelAndView, HttpServletRequest request){
+    public ModelAndView games(ModelAndView modelAndView){
 
-        HttpSession session = request.getSession();
-        User user = (User) session.getAttribute("user");
-
-        if (user != null) {
-            uid = user.getId();
-        }
 
         PageHelper.startPage(1,13);
 
@@ -82,7 +67,7 @@ public class GamesController {
 
         PageInfo pageInfo = new PageInfo(hotSale);
 
-
+        System.out.println(hotSale);
         modelAndView.addObject("hotSale", hotSale);
         modelAndView.addObject("price", priceInt/25);
         modelAndView.addObject("total", pageInfo.getTotal());
@@ -146,6 +131,7 @@ public class GamesController {
         gValue(type, price, pageNum, pageSize);
 
         List<Games>   gamesDiscountList = gamesService.getGamesDiscountList(typeID,priceInt);
+
 
         PageInfo pageInfo = new PageInfo(gamesDiscountList);
 
@@ -297,27 +283,15 @@ public class GamesController {
         priceInt=0;
 
         if (price!=null&&!price.equals("任意数值")){
-
-
-                priceInt=Integer.parseInt(price);
-
-
+            priceInt=Integer.parseInt(price);
         }
 
         if (type!=null&&!type.equals("")){
-
-
-                typeID=Integer.parseInt(type);
-
-
+            typeID=Integer.parseInt(type);
         }
 
-        if (pageNum!=null&&pageSize!=null){
-            this.pageNum=pageNum;
-            this.pageSize=pageSize;
-        }
 
-        PageHelper.startPage(this.pageNum,this.pageSize);
+        PageHelper.startPage(pageNum,pageSize);
     }
 }
 

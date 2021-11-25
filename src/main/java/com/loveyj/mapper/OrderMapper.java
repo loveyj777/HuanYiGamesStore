@@ -64,13 +64,9 @@ public interface OrderMapper {
 
 
         @Insert("<script> " +
-                "" +
                 "INSERT INTO `order`(uid,uName,`orderPoints`,`status`) " +
-                "" +
                 "VALUES" +
                 "(#{uid},#{uName},#{orderPoints},'0')" +
-
-                "" +
                 "</script>")
         int insertOrderNotPay(@Param("uid") int uid,@Param("uName") String uName,@Param("orderPoints") int orderPoints);
 

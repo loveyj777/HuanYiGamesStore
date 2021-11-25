@@ -14,7 +14,7 @@
 
    <context:component-scan base-package="com.loveyj.controller"/>
 
-    <mvc:view-controller path="/" view-name="redirect:index"/>
+<!--    <mvc:view-controller path="/index" view-name="redirect:index"/>-->
 
 
 <!--视图解析器-->
@@ -31,7 +31,11 @@
             <mvc:mapping path="/user/{id}"/>
             <mvc:mapping path="/shopCar"/>
             <mvc:mapping path="/shopCar/addToShopCar"/>
-            <bean class="com.loveyj.utility.Interceptor"/>
+            <bean class="com.loveyj.utility.UserInterceptor"/>
+        </mvc:interceptor>
+        <mvc:interceptor>
+            <mvc:mapping path="/admin"/>
+            <bean class="com.loveyj.utility.AdminInterceptor"/>
         </mvc:interceptor>
     </mvc:interceptors>
 

@@ -53,16 +53,12 @@ public class UserCouponController {
     public String userCoupon(HttpServletRequest request) {
         HttpSession session = request.getSession();
         User user = (User) session.getAttribute("user");
-
-        if (user != null) {
             uid = user.getId();
-            couponService.updateUserCouponIfIsOverdue(uid);
-        }
         return "userCoupon";
     }
 
     /**
-     * @param :  
+     * @param :
      * @return String
      * @author lov3YJ
      * @description 未使用优惠卷
@@ -86,7 +82,7 @@ public class UserCouponController {
 
 
     /**
-     * @param :  
+     * @param :
      * @return String
      * @author lov3YJ
      * @description 已使用优惠卷
@@ -107,7 +103,7 @@ public class UserCouponController {
 
 
     /**
-     * @param :  
+     * @param :
      * @return String
      * @author lov3YJ
      * @description 已过期优惠卷

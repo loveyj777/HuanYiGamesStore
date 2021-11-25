@@ -58,14 +58,8 @@ public class UserOrderController {
     public  String userInfo(HttpServletRequest request){
         HttpSession session = request.getSession();
         User user = (User) session.getAttribute("user");
-
-
-            uid = user.getId();
-            couponService.updateUserCouponIfIsOverdue(uid);
-        System.out.println(uid);
+        uid = user.getId();
             return "user";
-
-
     }
 
     

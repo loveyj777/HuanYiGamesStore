@@ -1,7 +1,6 @@
 package com.loveyj.service;
 
 import com.loveyj.pojo.Coupon;
-import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -13,7 +12,7 @@ public interface CouponService {
 
     List<Coupon> getUserOverdueCoupon(int uid);
 
-    int updateUserCouponIfIsOverdue(int uid);
+    int updateUserCouponIfIsOverdue(int uid,int cid);
 
     List<Coupon> getCoupon();
 

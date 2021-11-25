@@ -13,7 +13,7 @@ public interface GamesMapper {
 
     @Select("" +
             "<script>" +
-            "SELECT games.`id`,`gameName`,`price`,`discount`,`publishTime`,`discountPrice`,`engGameName`,`type` FROM Games,games_discount WHERE STATUS='1' AND games.`id`=games_discount.`gid` AND `games_discount`.`discount` != 'null'" +
+            "SELECT games.`id`,`gameName`,`price`,`discount`,`publishTime`,`discountPrice`,`engGameName`,`type` FROM games,games_discount WHERE STATUS='1' AND games.`id`=games_discount.`gid` AND `games_discount`.`discount` != 'null'" +
             "" +
             "<if test='type!=0'>and `games`.`type` = #{type}</if>" +
             "<if test='discountPrice!=0'>and `games`.`discountPrice` BETWEEN '0' AND #{discountPrice} </if>" +
@@ -42,7 +42,7 @@ public interface GamesMapper {
 
     @Select("<script>" +
             "" +
-            "SELECT games.`id`,`gameName`,`price`,`discount`,`publishTime`,`discountPrice`,`engGameName`,`type` FROM Games,games_discount WHERE STATUS='1' AND games.`id`=games_discount.`gid` " +
+            "SELECT games.`id`,`gameName`,`price`,`discount`,`publishTime`,`discountPrice`,`engGameName`,`type` FROM games,games_discount WHERE STATUS='1' AND games.`id`=games_discount.`gid` " +
             "" +
             "<if test='type!=0'>and `games`.`type` = #{type}</if>" +
             "<if test='discountPrice!=0'>and `games`.`discountPrice` BETWEEN '0' AND #{discountPrice} </if>" +
@@ -149,7 +149,7 @@ public interface GamesMapper {
 
     @Select("" +
             "<script>" +
-            "SELECT games.`id`,`gameName`,`price`,`discount`,`publishTime`,`discountPrice`,`engGameName`,`type` FROM Games,games_discount WHERE STATUS='1' AND games.`id`=games_discount.`gid` " +
+            "SELECT games.`id`,`gameName`,`price`,`discount`,`publishTime`,`discountPrice`,`engGameName`,`type` FROM games,games_discount WHERE STATUS='1' AND games.`id`=games_discount.`gid` " +
             "" +
             "<if test='type!=0'>and `games`.`type` = #{type}</if>" +
             "<if test='discountPrice!=0'>and `games`.`discountPrice` BETWEEN '0' AND #{discountPrice} </if>" +
@@ -178,7 +178,7 @@ public interface GamesMapper {
 
     @Select("" +
             "<script>" +
-            "SELECT games.`id`,`gameName`,`price`,`discount`,`publishTime`,`discountPrice`,`engGameName`,`type` FROM Games,games_discount WHERE STATUS='1' AND games.`id`=games_discount.`gid` " +
+            "SELECT games.`id`,`gameName`,`price`,`discount`,`publishTime`,`discountPrice`,`engGameName`,`type` FROM games,games_discount WHERE STATUS='1' AND games.`id`=games_discount.`gid` " +
             "" +
             "<if test='type!=0'>and `games`.`type` = #{type}</if>" +
             "<if test='discountPrice!=0'>and `games`.`discountPrice` BETWEEN '0' AND #{discountPrice} </if>" +
@@ -205,7 +205,7 @@ public interface GamesMapper {
 
     @Select("" +
             "<script>" +
-            "SELECT games.`id`,`gameName`,`price`,`discount`,`publishTime`,`discountPrice`,`engGameName`,`type` FROM Games,games_discount WHERE STATUS='1' AND games.`id`=games_discount.`gid` " +
+            "SELECT games.`id`,`gameName`,`price`,`discount`,`publishTime`,`discountPrice`,`engGameName`,`type` FROM games,games_discount WHERE STATUS='1' AND games.`id`=games_discount.`gid` " +
             "" +
             "<if test='gameName!=null'>and `games`.`gameName` like '%${gameName}%'</if>" +
             "<if test='engGameName!=null'>and `games`.`engGameName` like '%${engGameName}%' </if>" +
@@ -292,14 +292,10 @@ public interface GamesMapper {
 
 
     @Select("<script>" +
-            "" +
-            "" +
             "select *,`games`.`id` as a from games " +
-            "" +
             "where 1=1" +
             "<if test='gameName!=null'>and `games`.`gameName` like '%${gameName}%'</if>" +
             "<if test='engGameName!=null'>and `games`.`engGameName` like '%${engGameName}%' </if>" +
-            "" +
             "</script>")
     @Results({
             @Result(property = "id",column = "a"),

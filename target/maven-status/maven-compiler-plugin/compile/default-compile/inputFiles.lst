@@ -5,6 +5,7 @@ C:\HuanYiGamesStore\src\main\java\com\loveyj\mapper\RollImgMapper.java
 C:\HuanYiGamesStore\src\main\java\com\loveyj\pojo\UserPoints.java
 C:\HuanYiGamesStore\src\main\java\com\loveyj\controller\AddCouponController.java
 C:\HuanYiGamesStore\src\main\java\com\loveyj\utility\AlipayUtil.java
+C:\HuanYiGamesStore\src\main\java\com\loveyj\utility\UserInterceptor.java
 C:\HuanYiGamesStore\src\main\java\com\loveyj\pojo\OrderDetail.java
 C:\HuanYiGamesStore\src\main\java\com\loveyj\mapper\GamesMapper.java
 C:\HuanYiGamesStore\src\main\java\com\loveyj\service\impl\OrderDetailsServiceImpl.java
@@ -23,14 +24,15 @@ C:\HuanYiGamesStore\src\main\java\com\loveyj\service\GameDiscountService.java
 C:\HuanYiGamesStore\src\main\java\com\loveyj\service\UserCouponService.java
 C:\HuanYiGamesStore\src\main\java\com\loveyj\service\impl\UserPointsServiceImpl.java
 C:\HuanYiGamesStore\src\main\java\com\loveyj\service\impl\UserServiceImpl.java
+C:\HuanYiGamesStore\src\main\java\com\loveyj\service\impl\AdminServiceImpl.java
 C:\HuanYiGamesStore\src\main\java\com\loveyj\pojo\User.java
+C:\HuanYiGamesStore\src\main\java\com\loveyj\mapper\AdminMapper.java
 C:\HuanYiGamesStore\src\main\java\com\loveyj\mapper\GamesDiscountMapper.java
 C:\HuanYiGamesStore\src\main\java\com\loveyj\service\GamesImgService.java
 C:\HuanYiGamesStore\src\main\java\com\loveyj\mapper\ShopCarMapper.java
 C:\HuanYiGamesStore\src\main\java\com\loveyj\mapper\UserGamesMapper.java
 C:\HuanYiGamesStore\src\main\java\com\loveyj\pojo\GamesImg.java
 C:\HuanYiGamesStore\src\main\java\com\loveyj\pojo\UserCoupon.java
-C:\HuanYiGamesStore\src\main\java\com\loveyj\utility\Interceptor.java
 C:\HuanYiGamesStore\src\main\java\com\loveyj\controller\BuyController.java
 C:\HuanYiGamesStore\src\main\java\com\loveyj\service\impl\UserGamesServiceImpl.java
 C:\HuanYiGamesStore\src\main\java\com\loveyj\controller\AddGameController.java
@@ -40,6 +42,7 @@ C:\HuanYiGamesStore\src\main\java\com\loveyj\controller\UserOrderController.java
 C:\HuanYiGamesStore\src\main\java\com\loveyj\mapper\UserCouponMapper.java
 C:\HuanYiGamesStore\src\main\java\com\loveyj\service\UserPointsDetailsService.java
 C:\HuanYiGamesStore\src\main\java\com\loveyj\controller\UserPointsController.java
+C:\HuanYiGamesStore\src\main\java\com\loveyj\service\AdminService.java
 C:\HuanYiGamesStore\src\main\java\com\loveyj\pojo\Admin.java
 C:\HuanYiGamesStore\src\main\java\com\loveyj\service\OrderDetailsService.java
 C:\HuanYiGamesStore\src\main\java\com\loveyj\pojo\RollImg.java
@@ -49,10 +52,10 @@ C:\HuanYiGamesStore\src\main\java\com\loveyj\pojo\Order.java
 C:\HuanYiGamesStore\src\main\java\com\loveyj\service\RollImgService.java
 C:\HuanYiGamesStore\src\main\java\com\loveyj\controller\ShopCarController.java
 C:\HuanYiGamesStore\src\main\java\com\loveyj\controller\GamesController.java
-C:\HuanYiGamesStore\src\main\java\com\loveyj\controller\AdminLoginController.java
 C:\HuanYiGamesStore\src\main\java\com\loveyj\service\ShopCarService.java
 C:\HuanYiGamesStore\src\main\java\com\loveyj\pojo\UserPointsDetails.java
 C:\HuanYiGamesStore\src\main\java\com\loveyj\pojo\Coupon.java
+C:\HuanYiGamesStore\src\main\java\com\loveyj\config\CorsConfig.java
 C:\HuanYiGamesStore\src\main\java\com\loveyj\controller\LoginController.java
 C:\HuanYiGamesStore\src\main\java\com\loveyj\controller\CouponController.java
 C:\HuanYiGamesStore\src\main\java\com\loveyj\config\FastJsonConfig.java
@@ -75,3 +78,4 @@ C:\HuanYiGamesStore\src\main\java\com\loveyj\service\impl\GameDiscountServiceImp
 C:\HuanYiGamesStore\src\main\java\com\loveyj\service\impl\GamesServiceImpl.java
 C:\HuanYiGamesStore\src\main\java\com\loveyj\mapper\OrderDetailsMapper.java
 C:\HuanYiGamesStore\src\main\java\com\loveyj\service\impl\UserPointsDetailsServiceImpl.java
+C:\HuanYiGamesStore\src\main\java\com\loveyj\utility\AdminInterceptor.java

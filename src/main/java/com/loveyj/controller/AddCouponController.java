@@ -7,6 +7,7 @@ import com.loveyj.service.CouponService;
 import com.loveyj.service.impl.CouponServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -39,7 +40,7 @@ public class AddCouponController {
      * @description 添加优惠卷
      * @date 2021/11/9 15:28
      */
-    @RequestMapping("/addCoupon")
+    @PostMapping("/addCoupon")
     @ResponseBody
     public String addCoupon(String couponName,String endTime,String condition,int couponPrice,int threshold,int needPoints){
 

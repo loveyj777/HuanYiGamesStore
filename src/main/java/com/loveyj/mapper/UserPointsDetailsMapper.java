@@ -12,7 +12,7 @@ public interface UserPointsDetailsMapper {
     @Select("<script>" +
             "" +
             "" +
-            "SELECT * FROM user_pointsDetails " +
+            "SELECT * FROM user_pointsdetails " +
             "WHERE 1=1" +
             "" +
             "<if test='type==0'>and type =#{type}</if>" +

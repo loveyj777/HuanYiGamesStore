@@ -1,6 +1,7 @@
 package com.loveyj.controller;
 
 import com.alibaba.fastjson.JSONObject;
+import com.github.pagehelper.PageHelper;
 import com.loveyj.pojo.*;
 import com.loveyj.service.*;
 
@@ -19,7 +20,7 @@ import java.util.List;
 
 
 /**
- * @author：Love YJ❤Ghy
+ * @author：Love YJ
  * @description ：主页
  *
  * */
@@ -68,13 +69,22 @@ public class IndexController {
         if (user != null) {
             uid = user.getId();
             List<Coupon>  userCoupons = couponService.getNotUserCouponByUid(uid);
-            System.out.println(userCoupons);
+
             modelAndView.addObject("userCoupons", userCoupons);
+            List<Coupon> couponList = couponService.getNotUseCouponByUid(uid);
+            for (Coupon coupon : couponList){
+                couponService.updateUserCouponIfIsOverdue(uid,coupon.getId());
+            }
         }
         List<RollImg> rollImg = rollImgService.getAllRollImg();
+
+        PageHelper.startPage(1,10);
         List<Games>   games =  gamesService.getGamesDiscountList(0,0);
+        PageHelper.startPage(1,10);
         List<Games>   games2 =  gamesService.getNewGame(0,0);
+        PageHelper.startPage(1,5);
         List<Coupon>  coupons = couponService.getCoupon();
+        PageHelper.startPage(1,10);
         List<Games>   game4 = gamesService.getHotSale(0,0);
 
 
@@ -95,7 +105,7 @@ public class IndexController {
 
         HttpSession session =  request.getSession();
         session.removeAttribute("user");
-        return "redirect:/index";
+        return "redirect:http://www.hygame.store/index";
     }
 
 
@@ -176,6 +186,8 @@ public class IndexController {
 
         }
     }
+
+
 
 
 }

@@ -56,10 +56,7 @@ public class UserPointsController {
     public String userPoints(HttpServletRequest request) {
         HttpSession session = request.getSession();
         User user = (User) session.getAttribute("user");
-
-        if (user != null) {
             uid = user.getId();
-        }
         return "userPoints";
     }
 

@@ -3,13 +3,16 @@ com\loveyj\pojo\GamesDiscount.class
 com\loveyj\pojo\ShopCar.class
 com\loveyj\service\UserGamesService.class
 com\loveyj\mapper\UserCouponMapper.class
+com\loveyj\utility\UserInterceptor.class
 com\loveyj\controller\UserOrderController.class
 com\loveyj\service\RollImgService.class
+com\loveyj\mapper\AdminMapper.class
 com\loveyj\pojo\Coupon.class
 com\loveyj\service\OrderDetailsService.class
 com\loveyj\mapper\GamesDiscountMapper.class
 com\loveyj\controller\ShopCarController.class
 com\loveyj\controller\AddCouponController.class
+com\loveyj\utility\AdminInterceptor.class
 com\loveyj\service\ShopCarService.class
 com\loveyj\service\impl\GameDiscountServiceImpl.class
 com\loveyj\controller\AddGameController.class
@@ -18,6 +21,7 @@ com\loveyj\mapper\GameTypeMapper.class
 com\loveyj\service\GamesImgService.class
 com\loveyj\service\impl\UserCouponServiceImpl.class
 com\loveyj\config\FastJsonConfig.class
+com\loveyj\service\AdminService.class
 com\loveyj\controller\UserSettingController.class
 com\loveyj\service\OrderService.class
 com\loveyj\pojo\UserCoupon.class
@@ -30,6 +34,7 @@ com\loveyj\mapper\GamesImgMapper.class
 com\loveyj\mapper\UserGamesMapper.class
 com\loveyj\service\impl\UserServiceImpl.class
 com\loveyj\service\impl\OrderServiceImpl.class
+com\loveyj\service\impl\AdminServiceImpl.class
 com\loveyj\service\impl\GamesImgServiceImpl.class
 com\loveyj\pojo\Games.class
 com\loveyj\service\impl\RollImgServiceImpl.class
@@ -57,7 +62,6 @@ com\loveyj\service\GamesService.class
 com\loveyj\config\AlipayConfig.class
 com\loveyj\service\impl\GamesServiceImpl.class
 com\loveyj\service\impl\OrderDetailsServiceImpl.class
-com\loveyj\utility\Interceptor.class
 com\loveyj\pojo\User.class
 com\loveyj\mapper\UserPointsDetailsMapper.class
 com\loveyj\service\impl\UserPointsDetailsServiceImpl.class

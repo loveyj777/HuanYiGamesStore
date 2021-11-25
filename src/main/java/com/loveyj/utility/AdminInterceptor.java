@@ -1,0 +1,47 @@
+package com.loveyj.utility;
+
+import com.loveyj.pojo.Admin;
+import org.springframework.web.servlet.HandlerInterceptor;
+import org.springframework.web.servlet.ModelAndView;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+/**
+ * @ClassName: AdminInterceptor
+ * @Description:
+ * @author: Lov3YJ
+ * @date: 2021/11/22 14:13
+ */
+
+public class AdminInterceptor implements HandlerInterceptor {
+
+
+    @Override
+    public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
+
+        HttpSession httpSession = request.getSession();
+         Admin admin = (Admin) httpSession.getAttribute("admin");
+
+         if (admin!=null){
+             return true;
+         }
+         else {
+
+             response.sendRedirect("/admin/login");
+             return false;
+         }
+
+    }
+
+    @Override
+    public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, ModelAndView modelAndView) throws Exception {
+
+    }
+
+    @Override
+    public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex) throws Exception {
+
+    }
+}

@@ -19,6 +19,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.io.File;
 import java.io.IOException;
+import java.net.URL;
+import java.net.URLConnection;
 
 
 /**
@@ -56,10 +58,7 @@ public class UserSettingController {
     public String userSetting(HttpServletRequest request) {
         HttpSession session = request.getSession();
         User user = (User) session.getAttribute("user");
-
-        if (user != null) {
             uid = user.getId();
-        }
         return "userSetting";
     }
 
@@ -111,7 +110,10 @@ public class UserSettingController {
             user.setIntroduce(introduce);
             user.setUserName(username);
             user.setId(uid);
-                file.transferTo(new File("C:\\HuanYiGamesStore\\src\\main\\webapp\\img\\userHeadImg\\"+fileName));
+
+
+                file.transferTo(new File("/usr/local/tomcat/apache-tomcat-8.5.73/webapps/HuanYiGamesStore/img/userHeadImg/"+ fileName));
+
 
         }
 
@@ -229,7 +231,7 @@ public class UserSettingController {
      * @param request:  
      * @return String
      * @author lov3YJ
-     * @description 更新用户session
+     * @description 更换头像后更新用户session
      * @date 2021/11/10 9:55
      */
     @RequestMapping(value = "/returnSession",method = RequestMethod.POST,produces = "application/json;charset=utf-8" )

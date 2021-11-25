@@ -58,10 +58,7 @@ public class UserGamesController {
     public String userGames(HttpServletRequest request) {
         HttpSession session = request.getSession();
         User user = (User) session.getAttribute("user");
-
-        if (user != null) {
             uid = user.getId();
-        }
         return "userGame";
     }
 

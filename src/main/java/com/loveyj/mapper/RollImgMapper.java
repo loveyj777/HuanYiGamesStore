@@ -8,6 +8,6 @@ import java.util.List;
 public interface RollImgMapper {
 
 
-    @Select("select * from rollImg")
+    @Select("select * from rollimg")
     List<RollImg> getAllRollImg();
 }
